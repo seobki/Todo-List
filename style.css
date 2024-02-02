@@ -1,0 +1,185 @@
+.hidden {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+h2#clock {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+}
+
+#login-form {
+    position: absolute;
+    top: 352px;
+    /* 조절 가능 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#login-form input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* 모서리를 깎음 */
+    font-size: 1em;
+    margin-bottom: 10px;
+    outline: none;
+    /* 포커스 효과 제거 */
+}
+
+#login-form input[type="submit"] {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #9aa892;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* 부드러운 hover 효과를 위한 transition 추가 */
+}
+
+#login-form input[type="submit"]:hover {
+    background-color: #2980b9;
+    /* hover 시 배경 색상 변경 */
+}
+
+#todo-form {
+    position: absolute;
+    top: 414px;
+    /* 조절 가능 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#todo-form input {
+    width: 250px;
+    /* 칸을 더 크게 조절 */
+    padding: 12px;
+    /* 더 큰 패딩으로 조절 */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* 모서리를 더 깎음 */
+    font-size: 1em;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 445px;
+    /* 조절 가능 */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#todo-list li {
+    background-color: #9a9a9a;
+    text-indent: 16px;
+    width: 280px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    /* 텍스트와 버튼을 좌우 정렬 */
+    align-items: center;
+}
+
+#todo-list li:hover {
+    background-color: #7a7a7a;
+}
+
+#todo-list li:active {
+    background-color: #616466;
+}
+
+#todo-list li.completed {
+    background-color: darkseagreen;
+}
+
+#todo-list li.completed span {
+    text-decoration: line-through; /* 텍스트에만 가운데 줄을 적용 */
+}
+
+#todo-list li.completed::before {
+    content: '\2713'; /* 체크 마크 (유니코드) */
+    display: block;
+    font-size: 1.2em; /* 폰트 크기 조절 */
+    color: #333; /* 체크 마크 색상 설정 */
+}
+
+#todo-list button {
+    background-color: #616466;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#todo-list button:hover {
+    background-color: #2980b9;
+}
+
+#quote {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1em;
+    text-align: center;
+}
+
+#greeting {
+    position: absolute;
+    top: 297px;
+    /* 시계로부터의 간격 조절 */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    /* 원하는 폰트 크기로 조절 */
+}
+
+#weather {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    text-align: right;
+    font-weight: bold;
+}
